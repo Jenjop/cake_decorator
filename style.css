@@ -1,7 +1,12 @@
 body {
-	/*background-color: #;*/
+	background-color: #dcfffc;
 	margin: 0;
 	padding: 0;
+}
+
+#opening_title{
+	position: absolute;
+	width: 100%;
 }
 
 .base_bar{
