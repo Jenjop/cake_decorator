@@ -1,7 +1,8 @@
-body {
+body{
+	padding:0;
+	margin:0;	
+	font-family: 'Josefin Sans', sans-serif;
 	background-color: #dcfffc;
-	margin: 0;
-	padding: 0;
 }
 
 #opening_title{
@@ -11,7 +12,7 @@ body {
 
 .base_bar{
 	position: absolute;
-	width: 8%; height: 40%;
+	width: 8%; height: 50%;
 	left: 2%;
 	top: 10%;
 	display:flex;
@@ -60,7 +61,7 @@ body {
 }
 
 .base{
-	transform: translate(-5%,30%);
+	transform: translate(-5%,25%);
 	z-index : 10;
 
 }
@@ -78,7 +79,7 @@ body {
 	/*background-color: #f70291;*/
 	position: absolute;
 	margin: 0 auto;
-	top: 20%;
+	top: 40%;
 	bottom: 5%;
 	/*border-radius: 100px;*/
 	/*-webkit-border-radius: 100px;*/
@@ -102,3 +103,147 @@ body {
 	/*left: 80%;*/
 	z-index: 11;
 }
+
+
+.content{
+/*		min-width: 30%;*/
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	margin: 0 auto;
+	max-height: 100vh;
+}
+
+/*.text-container{
+	opacity: 1;
+}*/
+
+.finish{
+	left: 5%;
+	bottom: 0%;
+	position: absolute;
+	width: 100%; height: 4%;
+	text-align: left;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+
+
+}
+
+h1{
+	margin-top: 0;
+	padding-top: 5%;
+	text-align: center;
+	color: 	#e295ce;
+	position: relative;
+	top: 10%;
+	font-size: 4em;
+	margin-bottom: 10px;
+}
+
+p{
+	margin-top: 0;
+	text-align: center;
+	color: 	#e295ce;
+	margin-bottom: 20px;
+}
+
+h2{
+	margin-top: 0;
+	text-align: center;
+	color: 	#e295ce;
+	position: absolute;
+  	bottom: 0;
+  	left: 50%;
+  	transform: translate(-50%, -20%);
+	font-size: 2em;
+}
+
+.judge-container{
+/*	top: 20%;*/
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex: 1;
+/*	margin-left: 8rem; */
+	/*set distance between items: 50 px*/
+}
+
+.judge{
+/*	margin-right: 8rem;*/
+	height: 300px;
+    max-width: 290px;
+    display:block;
+/*    white-space: nowrap;
+    text-align: center; margin: 1em 0;*/
+/*    margin: 1rem;*/
+}
+
+.image{
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+}
+
+.head{
+	display: block;
+	position: absolute;
+	transition: all 1s linear;
+	top:0;
+}
+
+.body{
+	display: block;
+	position: absolute;
+	top:0;
+}
+
+.judge img{
+/*	width: 100%;*/
+	max-width:100%;
+	max-height:100%;
+	margin:auto;
+  	display:block;
+/*  	vertical-align: middle;*/
+}
+
+.box{
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+
+.whitebox{
+	width: 50%;
+	height:60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 1s linear;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.centered{
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 8.5vw;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8c6173;
+    transition: opacity 1s linear;
+}
+
+/*.hide{
+	opacity: 0;
+}
+
+.show{
+	opacity: 1;
+}*/
+
+
+
