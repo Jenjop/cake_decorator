@@ -1,0 +1,117 @@
+body{
+	padding:0;
+	margin:0;	
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #dcfffc;
+}
+
+.content{
+/*		min-width: 30%;*/
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	margin: 0 auto;
+	max-height: 100vh;
+}
+
+/*.text-container{
+	opacity: 1;
+}*/
+
+h1{
+	margin-top: 0;
+	padding-top: 5%;
+	text-align: center;
+	color: 	#e295ce;
+	position: relative;
+	top: 10%;
+	font-size: 4em;
+	margin-bottom: 10px;
+}
+
+p{
+	margin-top: 0;
+	text-align: center;
+	color: 	#e295ce;
+	margin-bottom: 20px;
+}
+
+h2{
+	margin-top: 0;
+	text-align: center;
+	color: 	#e295ce;
+	position: absolute;
+  	bottom: 0;
+  	left: 50%;
+  	transform: translate(-50%, -20%);
+	font-size: 2em;
+}
+
+.judge-container{
+/*	top: 20%;*/
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex: 1;
+/*	margin-left: 8rem; */
+	/*set distance between items: 50 px*/
+}
+
+.judge{
+/*	margin-right: 8rem;*/
+	height: 300px;
+    max-width: 300px;
+    display:block;
+/*    white-space: nowrap;
+    text-align: center; margin: 1em 0;*/
+/*    margin: 1rem;*/
+}
+
+.judge img{
+/*	width: 100%;*/
+	max-width:100%;
+	max-height:100%;
+	margin:auto;
+  	display:block;
+/*  	vertical-align: middle;*/
+}
+
+.box{
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+
+.whitebox{
+	width: 50%;
+	height:50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 1s linear;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.centered{
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 30px;
+	font-size: 10vw;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8c6173;
+    transition: opacity 1s linear;
+}
+
+/*.hide{
+	opacity: 0;
+}
+
+.show{
+	opacity: 1;
+}*/
+
+
+
