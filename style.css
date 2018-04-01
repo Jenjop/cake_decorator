@@ -1,0 +1,65 @@
+body {
+	
+	margin: 0;
+	padding: 0;
+}
+
+.cake_area{
+	background-color: black;
+	height: 80%; width: 80%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.cake{
+	background-color: #a9f9f9;
+	width: 400px; height: 400px;
+	position: relative;
+	margin: 0 auto;
+	top: 20%;
+	border-radius: 1000px;
+	-webkit-border-radius: 1000px;
+	-moz-border-radius: 1000px;
+
+	/*-webkit-transition: all 0.1s ease-in;*/
+}
+
+.base{
+	transform: translate(-50%,50%);
+
+}
+
+.ingredients_bar{
+	background-color: #afffaf;
+	width: 100%; height: 15%;
+	position: relative; top: 2.5%; bottom: 2.5%;
+}
+
+.ingredient{
+	background-color: #f70291;
+	width: 104px; height: 104px;
+	position: absolute;
+	margin: 0 auto;
+	top: 5%;
+	bottom: 5%;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	/*transform: translate(-50%,0%);*/
+}
+
+#ingredient1{
+	left: 10%;
+}
+#ingredient2{
+	left: 30%;
+}
+#ingredient3{
+	left: 50%;
+}
+#ingredient4{
+	left: 70%;
+}
+#ingredient5{
+	left: 90%;
+}
