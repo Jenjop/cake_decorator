@@ -2,7 +2,7 @@ body{
 	padding:0;
 	margin:0;	
 	font-family: 'Josefin Sans', sans-serif;
-	background-color: #dafffc;
+	background-color: #dcfffc;
 }
 
 .content{
@@ -82,6 +82,17 @@ h2{
 	text-align: center;
 }
 
+.whitebox{
+	width: 50%;
+	height:50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 1s linear;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
 .centered{
 	font-family: 'Gloria Hallelujah', cursive;
 	font-size: 30px;
@@ -94,13 +105,13 @@ h2{
     transition: opacity 1s linear;
 }
 
-.hide{
+/*.hide{
 	opacity: 0;
 }
 
 .show{
 	opacity: 1;
-}
+}*/
 
 
 
