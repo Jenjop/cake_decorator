@@ -81,6 +81,37 @@ function doHover(i){
 
 }
 
+function rotate(target,val){
+    
+}
+
+
+function bobble(target,val){
+    var num = 0;
+    setInterval(function(){
+    if (num % 2 == 0){
+        target.css("transform",`rotate(${val}deg)`)
+    }
+    else{
+        target.css("transform",`rotate(${-val}deg)`)
+    }
+    num ++
+    }, 1000);
+}
+
+function bobUp(target){
+    var num = 0;
+    setInterval(function(){
+    if (num % 2 == 0){
+        target.css("transform",`translate(0,-5px)`)
+    }
+    else{
+        target.css("transform",`translate(0,5px)`)
+    }
+    num ++
+    }, 1000);
+}
+
 $('document').ready(function() { 
 
     for (var i = 1; i <= 3; i++)
@@ -100,16 +131,14 @@ $('document').ready(function() {
         }
         $(`#j${i}`).text(`${score}`);
         showScores(i); //the array will be a parameter
-
-        
+        doHover(i);
     }
 
     var audio = new Audio("drum.mp3");
     audio.play();
 
-    for (var i =1; i<=3; i++)
-    {
-        doHover(i);
-    }
+    bobble($('#dog .head'), 7)
+    bobble($('#cat .head'), -7)
+    bobUp($('#bun .head'))
     
 });

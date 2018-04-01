@@ -60,11 +60,32 @@ h2{
 .judge{
 /*	margin-right: 8rem;*/
 	height: 300px;
-    max-width: 300px;
+    max-width: 290px;
     display:block;
 /*    white-space: nowrap;
     text-align: center; margin: 1em 0;*/
 /*    margin: 1rem;*/
+}
+
+.image{
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+}
+
+.head{
+	display: block;
+	position: absolute;
+	transition: all 1s linear;
+	top:0;
+}
+
+.body{
+	display: block;
+	position: absolute;
+	top:0;
 }
 
 .judge img{
@@ -84,7 +105,7 @@ h2{
 
 .whitebox{
 	width: 50%;
-	height:50%;
+	height:60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -95,8 +116,7 @@ h2{
 
 .centered{
 	font-family: 'Gloria Hallelujah', cursive;
-	font-size: 30px;
-	font-size: 10vw;
+	font-size: 8.5vw;
 	position: absolute;
     top: 50%;
     left: 50%;
