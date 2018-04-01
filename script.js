@@ -21,10 +21,66 @@ function cake_remove(id){
 
 }
 
+function resize_big(target){
+  $(target).width(target.getAttribute('orig-x'))
+  $(target).height(target.getAttribute('orig-y'))
+  // console.log(`${target}, ${target.getAttribute('orig-x')}`)
+}
+
+function resize_small(target){
+  $(target).width(target.getAttribute('orig-x')*.2)
+  $(target).height(target.getAttribute('orig-y')*.2)
+  // console.log(`${target}, ${target.getAttribute('orig-x')}`)
+}
+
+
+// var test = []
+// var test2
+// var i = 0
 $('document').ready(function(){
 
- 	$('.ingredient').addClass("draggable")
- 	$('div').not('.draggable,.cake').addClass("outside")
+  $( "#chocolate_opt" ).click(function() {
+    $(".base").attr("src","chocolate_base.png");
+  });
+
+  $( "#vanilla_opt" ).click(function() {
+    $(".base").attr("src","vanilla_base.png");
+  });
+
+  $( "#velvet_opt" ).click(function() {
+    $(".base").attr("src","velvet_base.png");
+  });
+
+  var cw = $('.base_opt').width();
+  $('.base_opt').css({
+    'height': cw + 'px'
+  });
+
+
+
+
+ 	$('.ingredient').addClass("draggable");
+ 	$('div').not('.draggable,.cake').addClass("outside");
+
+  $('.ingredient').each(function(){
+      // test[i] = this
+      this.setAttribute('orig-x',this.clientWidth);
+      this.setAttribute('orig-y', this.clientHeight);
+      $(this).width(this.getAttribute('orig-x')*.2)
+      $(this).height(this.getAttribute('orig-y')*.2)
+      // resize_small(this)
+      // i++
+  });
+  var dif = 100/($('.ingredient').length +1)
+  var space = dif
+  $('.ingredient').each(function(){
+    $(this).css({'left':space + '%'
+    });
+    space += dif
+    // console.log(space)
+
+  });
+
 
 });
 
@@ -38,11 +94,11 @@ interact('.draggable')
     // enable inertial throwing
     inertia: true,
     // keep the element within the area of it's parent
-    // restrict: {
-    //   restriction: "body",
-    //   endOnly: true,
-    //   elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-    // },
+    restrict: {
+      restriction: "body",
+      endOnly: true,
+      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+    },
     // enable autoScroll
     autoScroll: true,
 
@@ -85,6 +141,16 @@ interact('.draggable')
   		cake_remove(event.relatedTarget.id)
   	}
 
+  });
+
+  interact('.ingredients_bar').dropzone({
+
+    ondragleave: function(event){
+      resize_big(event.relatedTarget)
+    },
+    ondragenter: function(event){
+      resize_small(event.relatedTarget)
+    }
   });
 
 
