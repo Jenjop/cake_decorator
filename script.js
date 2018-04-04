@@ -67,7 +67,7 @@ function calcScore1(size) { //at least n items
         return size;
     }
 
-    else if (size <= 6)
+    else if (size <= 7)
     {
       comment1 = "\"very full... lots of stuff... yes\"";
       return 10;
