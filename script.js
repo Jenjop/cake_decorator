@@ -8,8 +8,9 @@
 var script_var = (function all_script(){
 var on_cake = [];
 var cake_type = 'chocolate_opt';
-orig_body = $('body').html()
-orig_body = " <div  id = 'opening_title'>    <h1 style = 'text-align: center; font-family: Josefin Sans; font-size: 5em; color:  #e295ce;' > cake</h1>  </div>  <div class = 'base_bar undraggable'>    <!-- <img class = 'base_opt' src = 'vanilla_base.png'>    <img class = 'base_opt' src = 'velvet_base.png'>    <img class = 'base_opt' src = 'chocolate_base.png'> -->    <div class = 'base_opt' id = 'chocolate_opt'></div>    <div class = 'base_opt' id = 'vanilla_opt'></div>    <div class = 'base_opt' id = 'velvet_opt'></div>  </div>  <div class = 'cake_area undraggable'>    <div class = 'cake'>      <img class = 'base undraggable' src = 'chocolate_base.png'>    </div>  </div>  <div class = 'finish undraggable'>    <h2>done</h2>  </div>  <div class = 'ingredients_bar'>    <img class = 'ingredient top' id = 'cherry' src = 'cherry.png'>    <img class = 'ingredient top' id = 'strawberry' src = 'strawberry.png'>    <img class = 'ingredient top' id = 'candle' src = 'candle.png'>    <img class = 'ingredient frosting' id = 'vanilla_frosting' src = 'vanilla_frosting.png'>    <img class = 'ingredient frosting' id = 'chocolate_frosting' src = 'chocolate_frosting.png'>    <img class = 'ingredient trim' id = 'vanilla_trim' src = 'vanilla_trim.png'>    <img class = 'ingredient trim' id = 'chocolate_trim' src = 'chocolate_trim.png'>    <img class = 'ingredient layer' id = 'chocolate_layer' src = 'chocolate_layer.png'>    <img class = 'ingredient layer' id = 'velvet_layer' src = 'velvet_layer.png'>      </div>"
+$('document').ready(function(){
+  orig_body = $('body').html()
+});
 function cake_add(id){
 	if (on_cake.indexOf(id) != -1){}
 	else{
@@ -425,15 +426,9 @@ interact('.draggable')
   // this is used later in the resizing and gesture demos
   window.dragMoveListener = dragMoveListener;
   //Try to move html version of body into variable
-  console.log("body")
-  console.log($('body'))
-  console.log(".html")
-  console.log($('body').html())
-  console.log(orig_body)
-  var ab = $('body')
-  var abc = ab.html()
-  console.log(ab)
-  console.log(abc)
+  // function log(x){
+  //   console.log(x)
+  // }
 
 
 
