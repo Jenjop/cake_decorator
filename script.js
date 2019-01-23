@@ -34,7 +34,7 @@ function resize_small(target){
   // console.log(`${target}, ${target.getAttribute('orig-x')}`)
 }
 
-function rewrite(){
+function finish_rewrite(){
   // console.log('test');
   jQuery("body").html("      <div class='content'>        <div class='text-container'>        <h1>...and the judges' scores!</h1>        <p>(hover for commentary)</p>      </div>      <div class='judge-container'>        <div class='judge' id='dog'>          <div class='image'>              <img class='body' src='dogebod.png' style='left:10%;'>            <img class='head' src='dogehead.png' style='left:10%;'>                       </div>            <div class='box' id='1'>                <img src='cakebox.png'>                <div class='centered hide' id='j1'></div>                <div class='whitebox' id='w1'></div>              </div>          </div>          <div class='judge' id='bun'>              <div class='image'>              <img class='body' src='bunbod.png' style='left:20%;'>              <img class='head' src='bunhead.png' style='left:20%;'>          </div>            <div class='box' id='2'>                <img src='cakebox.png'>                <div class='centered hide' id='j2'></div>                <div class='whitebox' id='w2'></div>             </div>          </div>          <div class='judge' id='cat'>             <div class='image'>              <img class='body' src='catbod.png' style='left:15%;'>              <img class='head' src='cathead.png' style='left:15%;'>          </div>             <div class='box' id='3'>                <img src='cakebox.png'>                <div class='centered hide' id='j3'></div>                <div class='whitebox' id='w3'></div>             </div>          </div>      </div><!--      <div class='judge-container>        <div class='box'><img src='cakebox.png'></div>        <div class='box'><img src='cakebox.png'></div>        <div class='box'><img src='cakebox.png'></div>      </div> -->      <div class='text-container'>        <h2>decorate another</h2>      </div>      </div>");
 }
@@ -267,7 +267,7 @@ $('document').ready(function(){
   });
 
   $( ".finish" ).click(function() {
-    rewrite()
+    finish_rewrite()
     $('document').ready(function() { 
 
     for (var i = 1; i <= 3; i++)
