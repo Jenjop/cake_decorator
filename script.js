@@ -5,8 +5,10 @@
 
 
 // })
+// var script_var = (function all_script(){
 var on_cake = [];
 var cake_type = 'chocolate_opt';
+orig_body = $('body').html()
 function cake_add(id){
 	if (on_cake.indexOf(id) != -1){}
 	else{
@@ -34,9 +36,22 @@ function resize_small(target){
   // console.log(`${target}, ${target.getAttribute('orig-x')}`)
 }
 
-function rewrite(){
+function finish_rewrite(){
   // console.log('test');
-  jQuery("body").html("      <div class='content'>        <div class='text-container'>        <h1>...and the judges' scores!</h1>        <p>(hover for commentary)</p>      </div>      <div class='judge-container'>        <div class='judge' id='dog'>          <div class='image'>              <img class='body' src='dogebod.png' style='left:10%;'>            <img class='head' src='dogehead.png' style='left:10%;'>                       </div>            <div class='box' id='1'>                <img src='cakebox.png'>                <div class='centered hide' id='j1'></div>                <div class='whitebox' id='w1'></div>              </div>          </div>          <div class='judge' id='bun'>              <div class='image'>              <img class='body' src='bunbod.png' style='left:20%;'>              <img class='head' src='bunhead.png' style='left:20%;'>          </div>            <div class='box' id='2'>                <img src='cakebox.png'>                <div class='centered hide' id='j2'></div>                <div class='whitebox' id='w2'></div>             </div>          </div>          <div class='judge' id='cat'>             <div class='image'>              <img class='body' src='catbod.png' style='left:15%;'>              <img class='head' src='cathead.png' style='left:15%;'>          </div>             <div class='box' id='3'>                <img src='cakebox.png'>                <div class='centered hide' id='j3'></div>                <div class='whitebox' id='w3'></div>             </div>          </div>      </div><!--      <div class='judge-container>        <div class='box'><img src='cakebox.png'></div>        <div class='box'><img src='cakebox.png'></div>        <div class='box'><img src='cakebox.png'></div>      </div> -->      <div class='text-container'>        <h2>decorate another</h2>      </div>      </div>");
+  jQuery("body").html("      <div class='content'>        <div class='text-container'>        <h1>...and the judges' scores!</h1>        <p>(hover for commentary)</p>      </div>      <div class='judge-container'>        <div class='judge' id='dog'>          <div class='image'>              <img class='body' src='dogebod.png' style='left:10%;'>            <img class='head' src='dogehead.png' style='left:10%;'>                       </div>            <div class='box' id='1'>                <img src='cakebox.png'>                <div class='centered hide' id='j1'></div>                <div class='whitebox' id='w1'></div>              </div>          </div>          <div class='judge' id='bun'>              <div class='image'>              <img class='body' src='bunbod.png' style='left:20%;'>              <img class='head' src='bunhead.png' style='left:20%;'>          </div>            <div class='box' id='2'>                <img src='cakebox.png'>                <div class='centered hide' id='j2'></div>                <div class='whitebox' id='w2'></div>             </div>          </div>          <div class='judge' id='cat'>             <div class='image'>              <img class='body' src='catbod.png' style='left:15%;'>              <img class='head' src='cathead.png' style='left:15%;'>          </div>             <div class='box' id='3'>                <img src='cakebox.png'>                <div class='centered hide' id='j3'></div>                <div class='whitebox' id='w3'></div>             </div>          </div>      </div><!--      <div class='judge-container>        <div class='box'><img src='cakebox.png'></div>        <div class='box'><img src='cakebox.png'></div>        <div class='box'><img src='cakebox.png'></div>      </div> -->      <div class='text-container restart'>        <h2>decorate another</h2>      </div>      </div>");
+}
+
+function restart_rewrite(){
+
+
+  jQuery("body").html(orig_body);
+
+}
+
+function apply_restart_rewrite(){
+  $(".restart").click(function(){
+      restart_rewrite()
+  });
 }
 
 var comment1 = "";
@@ -266,8 +281,14 @@ $('document').ready(function(){
     'height': cw + 'px'
   });
 
+/*
+  $(".restart").click(function(){
+    restart_rewrite()
+  });
+*/
+
   $( ".finish" ).click(function() {
-    rewrite()
+    finish_rewrite()
     $('document').ready(function() { 
 
     for (var i = 1; i <= 3; i++)
@@ -296,6 +317,8 @@ $('document').ready(function(){
     bobble($('#dog .head'), 7)
     bobble($('#cat .head'), -7)
     bobUp($('#bun .head'))
+    apply_restart_rewrite()
+    script_var()
     
 });
   });
@@ -400,7 +423,18 @@ interact('.draggable')
 
   // this is used later in the resizing and gesture demos
   window.dragMoveListener = dragMoveListener;
+  //Try to move html version of body into variable
+  console.log("body")
+  console.log($('body'))
+  console.log(".html")
+  console.log($('body').html())
+  console.log(orig_body)
+  var ab = $('body')
+  var abc = ab.html()
+  console.log(ab)
+  console.log(abc)
 
 
 
-
+// return all_script
+// })();
